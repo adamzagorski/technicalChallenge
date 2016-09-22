@@ -1,6 +1,7 @@
 package com.gft;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
@@ -14,7 +15,12 @@ public final class NodeImpl implements Node
     List<Node> childrenList;
 
     public NodeImpl(Node... childrenList) {
-        this.childrenList = Arrays.asList(childrenList);
+        if (childrenList != null ){
+            this.childrenList = Arrays.asList(childrenList);
+        }
+        else{
+            this.childrenList = new ArrayList<Node>();
+        }
     }
 
     public Iterator<Node> iterator() {

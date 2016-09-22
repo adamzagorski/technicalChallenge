@@ -6,6 +6,6 @@ package com.gft;
 public final class Nodes {
 
     public static Iterable<Node> convert(Node root){
-        return null;
+        return root;
     }
 }
